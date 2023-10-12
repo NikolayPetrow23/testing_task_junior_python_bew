@@ -53,6 +53,36 @@ alembic upgrade head
 uvicorn app.main:app --host 0.0.0.0 --port 8000
 ```
 
+## Пример запросов и ответов API
+
+### Запрос на запись случайного вопроса и ответа из стороннего API
+```
+# Endpoint
+POST    /question
+```
+
+#### Пример запроса
+```
+/question?question_num=1
+```
+
+#### Пример ответа
+```
+{
+  "Question": {
+    "text_question": "As the Vietnam War raged & men were drafted who couldn't vote, the 26th amendment made the voting age this",
+    "text_answer": "18",
+    "created_at": "2022-12-30",
+    "id": 1
+  }
+}
+```
+
+### Swagger (документация проекта)
+```
+GET     /docs#/Вопрос/question_question_post
+```
+
 
 ## Автор
 Николай Петров - [GitHub](https://github.com/NikolayPetrow23)
