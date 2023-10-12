@@ -8,7 +8,3 @@ class SQuestion(BaseModel):
     text_question: str
     text_answer: str
     date_to: date
-
-
-class SNewQuestion(BaseModel):
-    pass
