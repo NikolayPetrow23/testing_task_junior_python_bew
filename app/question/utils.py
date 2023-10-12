@@ -1,6 +1,6 @@
 import datetime
-import aiohttp
 
+import aiohttp
 from dateutil import parser
 
 from app.config import URL_API
@@ -29,7 +29,7 @@ def unpacking_answers(json: dict) -> list[dict]:
         data.append({
             "text_question": json[key].get("question"),
             "text_answer": json[key].get("answer"),
-            "created_at": date_format(json[key].get("created_at").replace("Z", ""))
+            "created_at": datetime.datetime.now()
         })
     return data
 
