@@ -1,16 +1,9 @@
 import datetime
 
 import aiohttp
-from dateutil import parser
 
 from app.config import URL_API
 from app.question.dao import QuestionDAO
-
-
-def date_format(date: str) -> datetime:
-    created_at: datetime = parser.parse(date)
-    created_at_date: datetime = created_at.date()
-    return created_at_date
 
 
 async def check_unique_question(data: list[dict]):
